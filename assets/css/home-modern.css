@@ -1,0 +1,95 @@
+:root {
+    --vms-blue-900: #0b2a66;
+    --vms-blue-800: #123f9f;
+    --vms-blue-700: #1a56d6;
+    --vms-blue-500: #3b82f6;
+    --vms-sky-300: #7dd3fc;
+    --vms-surface: #f5f9ff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #102340;
+    background:
+        radial-gradient(circle at 12% 8%, rgba(29, 78, 216, 0.2), transparent 42%),
+        radial-gradient(circle at 88% 24%, rgba(56, 189, 248, 0.2), transparent 36%),
+        linear-gradient(180deg, #f8fbff 0%, #eef5ff 40%, #f7fbff 100%);
+}
+
+.vms-title {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.04em;
+}
+
+.vms-glass {
+    background: rgba(255, 255, 255, 0.86);
+    backdrop-filter: blur(10px);
+}
+
+.vms-shadow {
+    box-shadow: 0 18px 45px rgba(17, 73, 182, 0.16);
+}
+
+.vms-section-grid {
+    background-image:
+        linear-gradient(rgba(30, 64, 175, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 64, 175, 0.06) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.vms-fade-up {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: vmsFadeUp 0.7s ease forwards;
+}
+
+.vms-fade-up.delay-1 { animation-delay: 0.1s; }
+.vms-fade-up.delay-2 { animation-delay: 0.2s; }
+.vms-fade-up.delay-3 { animation-delay: 0.3s; }
+
+@keyframes vmsFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-card-image {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.chart-canvas {
+    min-height: 320px;
+}
+
+.vms-quick-actions a {
+    box-shadow: 0 8px 20px rgba(26, 86, 214, 0.08);
+}
+
+.vms-quick-actions {
+    animation: vmsSlideInLeft 0.45s ease both;
+}
+
+@keyframes vmsSlideInLeft {
+    from {
+        opacity: 0;
+        transform: translate(-14px, -50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, -50%);
+    }
+}
+
+.vms-quick-actions #quickActionsLauncher {
+    box-shadow: 0 16px 35px rgba(26, 86, 214, 0.14);
+}
+
+.vms-quick-actions #quickActionsLauncher:hover {
+    box-shadow: 0 18px 42px rgba(11, 42, 102, 0.22);
+}
